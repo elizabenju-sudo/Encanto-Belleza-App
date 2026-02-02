@@ -1,3 +1,34 @@
 <resources>
     <string name="app_name">Encanto-Belleza-App</string>
+    <string name="email">Email</string>
+    <string name="password">Contraseña</string>
+    <string name="iniciar_sesion">Iniciar Sesión</string>
+    <string name="registrarse">Registrarse</string>
+    <string name="nombre">Nombre</string>
+    <string name="confirmar_password">Confirmar Contraseña</string>
+    <string name="crear_cuenta">Crear Cuenta</string>
+    <string name="ya_tienes_cuenta">¿Ya tienes cuenta? Inicia sesión</string>
+    <string name="catalogo_servicios">Catálogo de Servicios</string>
+    <string name="agendar_cita">Agendar Cita</string>
+    <string name="mi_agenda">Mi Agenda</string>
+    <string name="logout">Cerrar Sesión</string>
+    <string name="logo_app">Logo Encanto y Belleza</string>
+    <string name="servicios_disponibles">Servicios Disponibles</string>
+    <string name="precio">Precio: $%1$s</string>
+    <string name="duracion">Duración: %1$s min</string>
+    <string name="seleccionar_servicio">Seleccionar Servicio</string>
+    <string name="agendar">Agendar</string>
+    <string name="fecha">Fecha</string>
+    <string name="hora">Hora</string>
+    <string name="empleado">Empleado</string>
+    <string name="seleccionar_fecha">Seleccionar Fecha</string>
+    <string name="seleccionar_hora">Seleccionar Hora</string>
+    <string name="confirmar">Confirmar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="cita_agendada">Cita agendada exitosamente</string>
+    <string name="error_campos">Por favor complete todos los campos</string>
+    <string name="error_credenciales">Credenciales incorrectas</string>
+    <string name="registro_exitoso">Registro exitoso</string>
+    <string name="error_registro">Error en el registro</string>
+    <string name="bienvenido">¡Bienvenido %1$s!</string>
 </resources>
