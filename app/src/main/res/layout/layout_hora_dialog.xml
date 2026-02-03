@@ -29,25 +29,28 @@
         android:id="@+id/timePicker"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:timePickerMode="spinner"
-        android:headerBackground="@color/colorPrimary" />
+        android:timePickerMode="spinner" />
 
     <!-- Horas disponibles -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/horas_disponibles"
+        android:text="Horas Disponibles"
         android:textSize="16sp"
         android:textColor="@color/colorPrimary"
         android:textStyle="bold"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="8dp" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvHorasDisponibles"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_marginBottom="16dp" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="16dp">
+
+        <!-- Aquí irían las horas disponibles dinámicamente -->
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -59,7 +62,7 @@
             android:id="@+id/btnCancelarHora"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/cancelar"
+            android:text="Cancelar"
             android:layout_marginEnd="8dp"
             android:backgroundTint="@color/mediumGray"
             android:textColor="@color/white" />
@@ -68,7 +71,7 @@
             android:id="@+id/btnConfirmarHora"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/confirmar"
+            android:text="Confirmar"
             android:backgroundTint="@color/colorPrimary"
             android:textColor="@color/white" />
 

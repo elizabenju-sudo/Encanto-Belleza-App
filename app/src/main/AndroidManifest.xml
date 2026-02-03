@@ -21,6 +21,7 @@
             </intent-filter>
         </activity>
 
+
         <activity
             android:name=".view.RegistroActivity"
             android:exported="false"
@@ -28,6 +29,16 @@
 
         <activity
             android:name=".view.CatalogoActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".view.AgendarCitaActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".view.ConfirmacionCitaActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
 

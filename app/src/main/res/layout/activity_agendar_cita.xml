@@ -207,7 +207,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/hora"
-                    app:startIconDrawable="@android:drawable/ic_lock_time">
+                    app:startIconDrawable="@android:drawable/ic_lock_lock">
 
                     <EditText
                         android:id="@+id/etHora"

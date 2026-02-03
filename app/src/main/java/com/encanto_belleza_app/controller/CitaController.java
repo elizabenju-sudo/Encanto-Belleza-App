@@ -7,14 +7,10 @@ import com.encanto_belleza_app.model.Cita;
 
 import java.util.List;
 
-import android.content.Context;
-import com.encanto_belleza_app.dao.CitaDAO;
-import com.encanto_belleza_app.model.Cita;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.List;
 import java.util.Locale;
 
 public class CitaController {
@@ -43,6 +39,14 @@ public class CitaController {
     public List<Cita> obtenerCitasPorCliente(int idCliente) {
         citaDAO.open();
         List<Cita> citas = citaDAO.getCitasByCliente(idCliente);
+        citaDAO.close();
+        return citas;
+    }
+
+    // MÉTODO ACTUALIZADO: Obtener citas por empleado
+    public List<Cita> obtenerCitasPorEmpleado(int idEmpleado) {
+        citaDAO.open();
+        List<Cita> citas = citaDAO.getCitasByEmpleado(idEmpleado);
         citaDAO.close();
         return citas;
     }
