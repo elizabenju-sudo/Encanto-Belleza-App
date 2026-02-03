@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Seleccionar Hora"
+        android:textSize="20sp"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/tvFechaSeleccionada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fecha: "
+        android:textSize="14sp"
+        android:textColor="@color/darkGray"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp" />
+
+    <TimePicker
+        android:id="@+id/timePicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:timePickerMode="spinner"
+        android:headerBackground="@color/colorPrimary" />
+
+    <!-- Horas disponibles -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/horas_disponibles"
+        android:textSize="16sp"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvHorasDisponibles"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginBottom="16dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end">
+
+        <Button
+            android:id="@+id/btnCancelarHora"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cancelar"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/mediumGray"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btnConfirmarHora"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/confirmar"
+            android:backgroundTint="@color/colorPrimary"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+</LinearLayout>

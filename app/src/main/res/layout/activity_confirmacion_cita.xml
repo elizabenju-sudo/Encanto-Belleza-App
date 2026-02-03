@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorBackground"
+    android:gravity="center"
+    android:padding="24dp">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_service"
+        android:contentDescription="@string/logo_app"
+        android:layout_marginBottom="24dp"
+        android:tint="@color/success" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cita_confirmada"
+        android:textSize="28sp"
+        android:textColor="@color/success"
+        android:textStyle="bold"
+        android:layout_marginBottom="32dp" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        android:layout_marginBottom="32dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/resumen_cita"
+                android:textSize="20sp"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:id="@+id/tvClienteConfirmacion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cliente: Juan Pérez"
+                    android:textSize="16sp"
+                    android:textColor="@color/textColor" />
+
+                <TextView
+                    android:id="@+id/tvServicioConfirmacion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Servicio: Corte de Cabello"
+                    android:textSize="16sp"
+                    android:textColor="@color/textColor" />
+
+                <TextView
+                    android:id="@+id/tvEmpleadoConfirmacion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Empleado: María González"
+                    android:textSize="16sp"
+                    android:textColor="@color/textColor" />
+
+                <TextView
+                    android:id="@+id/tvFechaConfirmacion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fecha: 15 Dic 2024"
+                    android:textSize="16sp"
+                    android:textColor="@color/textColor" />
+
+                <TextView
+                    android:id="@+id/tvHoraConfirmacion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hora: 10:30 AM"
+                    android:textSize="16sp"
+                    android:textColor="@color/textColor" />
+
+                <TextView
+                    android:id="@+id/tvDuracionConfirmacion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Duración: 30 min"
+                    android:textSize="16sp"
+                    android:textColor="@color/textColor" />
+
+                <TextView
+                    android:id="@+id/tvPrecioConfirmacion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Precio: $25.00"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorSecondary"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <Button
+        android:id="@+id/btnVolverCatalogo"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="@string/volver_catalogo"
+        android:backgroundTint="@color/colorPrimary"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/btnVerAgenda"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="@string/ver_agenda"
+        android:backgroundTint="@color/colorSecondary"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+</LinearLayout>

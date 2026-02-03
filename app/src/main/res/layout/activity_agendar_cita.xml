@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/agendar_cita"
+            android:textSize="24sp"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Card Servicio -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/detalle_servicio"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="12dp" />
+
+                <TextView
+                    android:id="@+id/tvServicioNombre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Corte de Cabello"
+                    android:textSize="16sp"
+                    android:textColor="@color/textColor"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/tvServicioDescripcion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Descripción del servicio"
+                    android:textSize="14sp"
+                    android:textColor="@color/darkGray"
+                    android:layout_marginBottom="8dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/duracion"
+                        android:textSize="14sp"
+                        android:textColor="@color/darkGray" />
+
+                    <TextView
+                        android:id="@+id/tvDuracion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="30 min"
+                        android:textSize="14sp"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold"
+                        android:layout_marginStart="8dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/precio"
+                        android:textSize="14sp"
+                        android:textColor="@color/darkGray" />
+
+                    <TextView
+                        android:id="@+id/tvPrecio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$25.00"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorSecondary"
+                        android:textStyle="bold"
+                        android:layout_marginStart="8dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Card Seleccionar Empleado -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/seleccionar_empleado"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="12dp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/empleado"
+                    app:startIconDrawable="@drawable/ic_user">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/autoCompleteEmpleados"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/seleccione_empleado" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Card Seleccionar Fecha y Hora -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/seleccione_fecha_hora"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- Seleccionar Fecha -->
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:hint="@string/fecha"
+                    app:startIconDrawable="@drawable/ic_calendar">
+
+                    <EditText
+                        android:id="@+id/etFecha"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/seleccionar_fecha"
+                        android:focusable="false"
+                        android:clickable="true" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Seleccionar Hora -->
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hora"
+                    app:startIconDrawable="@android:drawable/ic_lock_time">
+
+                    <EditText
+                        android:id="@+id/etHora"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/seleccionar_hora"
+                        android:focusable="false"
+                        android:clickable="true" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Botones de fecha rápida -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="12dp">
+
+                    <Button
+                        android:id="@+id/btnHoy"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/fecha_hoy"
+                        android:layout_marginEnd="8dp"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:textColor="@color/white" />
+
+                    <Button
+                        android:id="@+id/btnManana"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/fecha_manana"
+                        android:layout_marginEnd="8dp"
+                        android:backgroundTint="@color/colorSecondary"
+                        android:textColor="@color/white" />
+
+                    <Button
+                        android:id="@+id/btnPasadoManana"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/fecha_pasado_manana"
+                        android:backgroundTint="@color/colorSecondary"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Botón Agendar -->
+        <Button
+            android:id="@+id/btnAgendarCita"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="@string/confirmar"
+            android:backgroundTint="@color/colorPrimary"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp" />
+
+    </LinearLayout>
+
+</ScrollView>

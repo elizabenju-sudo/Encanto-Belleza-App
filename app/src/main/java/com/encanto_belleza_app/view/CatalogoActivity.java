@@ -12,7 +12,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.encanto_belleza_app.R;
 import com.encanto_belleza_app.adapters.ServicioAdapter;
 import com.encanto_belleza_app.controller.ServicioController;
+import com.encanto_belleza_app.controller.UsuarioController;
 import com.encanto_belleza_app.model.Servicio;
+import com.encanto_belleza_app.model.Usuario;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,7 +24,9 @@ public class CatalogoActivity extends AppCompatActivity implements ServicioAdapt
     private RecyclerView rvServicios;
     private ServicioAdapter servicioAdapter;
     private ServicioController servicioController;
+    private UsuarioController usuarioController;
     private String usuarioEmail, usuarioNombre, usuarioTipo;
+    private Usuario usuarioActual;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,8 +53,12 @@ public class CatalogoActivity extends AppCompatActivity implements ServicioAdapt
         String mensajeBienvenida = String.format(getString(R.string.bienvenido), usuarioNombre);
         tvBienvenida.setText(mensajeBienvenida);
 
-        // Inicializar controlador
+        // Inicializar controllers
         servicioController = new ServicioController(this);
+        usuarioController = new UsuarioController(this);
+
+        // Obtener usuario actual
+        usuarioActual = usuarioController.obtenerUsuario(usuarioEmail);
 
         // Cargar servicios
         cargarServicios();
@@ -82,11 +90,15 @@ public class CatalogoActivity extends AppCompatActivity implements ServicioAdapt
 
     @Override
     public void onAgendarClick(Servicio servicio) {
-        Toast.makeText(this, "Agendando: " + servicio.getNombre(), Toast.LENGTH_SHORT).show();
+        // Verificar que el usuario existe
+        if (usuarioActual == null) {
+            Toast.makeText(this, "Error: Usuario no encontrado", Toast.LENGTH_SHORT).show();
+            return;
+        }
 
-        Intent intent = new Intent(this, CitaActivity.class);
+        // Ir a la actividad de agendar cita
+        Intent intent = new Intent(this, AgendarCitaActivity.class);
         intent.putExtra("servicio_id", servicio.getId());
-        intent.putExtra("servicio_nombre", servicio.getNombre());
         intent.putExtra("usuario_email", usuarioEmail);
         startActivity(intent);
     }
@@ -96,3 +108,4 @@ public class CatalogoActivity extends AppCompatActivity implements ServicioAdapt
         // No hacer nada para evitar volver al login
     }
 }
+
